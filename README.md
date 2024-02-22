@@ -25,8 +25,7 @@ Cluster Evaluation: The quality of the clusters will be evaluated using appropri
 
 Regime Interpretation: Finally, we will interpret the identified clusters as distinct “regimes” in interest rates. The defining characteristics of each regime will be determined based on the features of the data points within each cluster.
 
-# NLP training based on regime detection 
-# Methodology
+# NLP training based on regime detection: Methodology
 
 Data Collection: Speeches from Fed officials are collected, primarily from the Fed’s official website and public records.
 
