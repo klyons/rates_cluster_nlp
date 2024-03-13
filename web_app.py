@@ -30,6 +30,12 @@ def get_cpi():
 @st.cache_data(ttl=3600)
 def get_3mnth_rates():
     data = pd.read_parquet("data/three_month_rates.parquet")
+    return data
+
+
+@st.cache_data(ttl=3600)
+def get_equities():
+    data = pd.read_parquet("data/df_close.parquet")
     return data 
 
 # Loading data and preprocessing
@@ -117,3 +123,8 @@ country_marker = create_country_data(clusters)
 
 st.header('')
 st.map(country_marker, zoom = 1)
+
+equities = get_equities()
+if countries:
+    st.subheader(f'equities data')
+    st.line_chart(equities[countries].pct_change(equities.shape[1]))
